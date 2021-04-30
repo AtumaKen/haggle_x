@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haggle_x/utilities/string_utils.dart';
 import 'package:haggle_x/widgets/background_widget.dart';
 import 'package:haggle_x/widgets/textfield_widget.dart';
 
@@ -18,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     //todo: add validation to textfields
     return Scaffold(
       body: BackgroundWidget(
@@ -41,7 +43,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 40,
               ),
               TextFieldWidget(
-                labelText: "Email Address",
+                labelText: StringUtils.emailLabel,
+                cursorColor: theme.primaryColor,
+                borderColor: theme.primaryColor,
+                labelColor: theme.primaryColor,
+                textColor: theme.primaryColor,
                 obscureText: false,
               ),
               SizedBox(
@@ -49,6 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               TextFieldWidget(
                 obscureText: _obscureState,
+
                 suffix: GestureDetector(
                   child: Icon(
                     Icons.remove_red_eye_rounded,
@@ -56,7 +63,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   onTap: _changeObscureState,
                 ),
-                labelText: "Password (Min. 8 characters)",
+                cursorColor: theme.primaryColor,
+                borderColor: theme.primaryColor,
+                labelColor: theme.primaryColor,
+                textColor: theme.primaryColor,
+                labelText: StringUtils.passwordLabel,
               ),
               SizedBox(
                 height: 15,

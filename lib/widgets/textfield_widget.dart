@@ -5,28 +5,41 @@ class TextFieldWidget extends StatelessWidget {
   final bool obscureText;
   final Widget? suffix;
 
+  final Color? cursorColor;
+
+  final Color? textColor;
+
+  final Color? labelColor;
+
+  final Color borderColor;
+
   TextFieldWidget(
       {Key? key,
       required this.labelText,
       required this.obscureText,
+      required this.borderColor,
+      this.cursorColor,
+      this.textColor,
+      this.labelColor,
       this.suffix});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      cursorColor: Theme.of(context).primaryColor,
+      cursorColor: cursorColor,
       obscureText: obscureText,
-      style: TextStyle(color: Theme.of(context).primaryColor),
+      style: TextStyle(color: textColor),
       decoration: InputDecoration(
         suffix: suffix,
         focusColor: Color.fromRGBO(160, 133, 225, 1),
         labelText: labelText,
         labelStyle: TextStyle(
-            color: Theme.of(context).primaryColor,
-            fontSize: 11,
-            fontWeight: FontWeight.w100),
+            color: labelColor, fontSize: 12, ),
         enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Theme.of(context).primaryColor),
+          borderSide: BorderSide(color: borderColor),
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: borderColor),
         ),
       ),
     );
