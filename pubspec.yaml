@@ -61,11 +61,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: BasisGrotesquePro-Bold
+    - family: BasisGrotesquePro
       fonts:
-        - asset: assets/fonts/BasisGrotesquePro-Regular.ttf
-        - asset: assets/fonts/BasisGrotesquePro-Bold.ttf
         - asset: assets/fonts/BasisGrotesquePro-light.ttf
+        - asset: assets/fonts/BasisGrotesquePro-Bold.ttf
+        - asset: assets/fonts/BasisGrotesquePro-Regular.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

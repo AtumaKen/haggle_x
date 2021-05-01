@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:haggle_x/utilities/string_utils.dart';
 import 'package:haggle_x/widgets/background_widget.dart';
+import 'package:haggle_x/widgets/buttons/yellow_button.dart';
 import 'package:haggle_x/widgets/textfield_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -37,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontSize: 40,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.w600),
                   )),
               SizedBox(
                 height: 40,
@@ -86,20 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 30,
               ),
-              Container(
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "LOG IN",
-                    style: TextStyle(
-                      color: Color.fromRGBO(62, 6, 6, 1),
-                    ),
-                  ),
-                  style: TextButton.styleFrom(
-                      backgroundColor: Theme.of(context).accentColor),
-                ),
-              ),
+              YellowButton(function: (){}, text: "LOG IN"),
               SizedBox(
                 height: 20,
               ),

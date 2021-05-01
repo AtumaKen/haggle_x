@@ -36,7 +36,7 @@ class VerifyScreen extends StatelessWidget {
                     style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontSize: 23,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w700,
                         letterSpacing: 1),
                   ),
                 ),
@@ -74,7 +74,7 @@ class VerifyScreen extends StatelessWidget {
                   SizedBox(
                     height: 40,
                   ),
-                  Text(StringUtils.expiryText),
+                  Text(StringUtils.expiryText, style: TextStyle(fontWeight: FontWeight.w600),),
                   SizedBox(
                     height: 20,
                   ),
@@ -85,7 +85,7 @@ class VerifyScreen extends StatelessWidget {
                       style: TextStyle(
                           decoration: TextDecoration.underline,
                           color: Theme.of(context).colorScheme.onPrimary,
-                          fontSize: 16),
+                          fontSize: 16, fontWeight: FontWeight.w700),
                     ),
                   ),
                   SizedBox(

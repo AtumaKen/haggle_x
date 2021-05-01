@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:haggle_x/screens/done_screen.dart';
+import 'package:haggle_x/screens/splash_screen.dart';
 import 'package:haggle_x/screens/verify_screen.dart';
 
 import 'app_theme.dart';
@@ -36,5 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return VerifyScreen();
     // return SignUpScreen();
+    // return DoneScreen();
+    // return LoginScreen();
+    // return SplashScreen();
   }
 }
