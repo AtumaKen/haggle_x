@@ -31,7 +31,7 @@ class TextFieldWidget extends StatelessWidget {
       style: TextStyle(color: textColor),
       decoration: InputDecoration(
         suffix: suffix,
-        focusColor: Color.fromRGBO(160, 133, 225, 1),
+        // focusColor: Color.fromRGBO(160, 133, 225, 1),
         labelText: labelText,
         labelStyle: TextStyle(
             color: labelColor, fontSize: 12, ),

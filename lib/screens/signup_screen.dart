@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:haggle_x/utilities/string_utils.dart';
-import 'package:haggle_x/widgets/back_button.dart';
+import 'package:haggle_x/widgets/buttons/back_button.dart';
 import 'package:haggle_x/widgets/background_widget.dart';
+import 'package:haggle_x/widgets/buttons/gradient_button.dart';
 import 'package:haggle_x/widgets/curved_container.dart';
 import 'package:haggle_x/widgets/textfield_widget.dart';
 
@@ -105,29 +106,7 @@ class SignUpScreen extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    InkWell(
-                      onTap: () {},
-                      child: Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6),
-                          gradient: LinearGradient(
-                            colors: [
-                              theme.backgroundColor,
-                              Color.fromRGBO(106, 75, 188, 1)
-                            ],
-                          ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "SIGN UP",
-                            style: TextStyle(
-                              color: theme.primaryColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+                    GradientButton(function: (){}, title: "SIGN UP"),
                     SizedBox(
                       height: 50,
                     ),
